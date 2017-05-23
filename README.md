@@ -49,9 +49,9 @@ end
 Write a method `find_missing_number` that returns the number missing in a list of sequential numbers from 1 to 10,000.  Your method's input will be a comma-separated string (e.g., "1, 2, 3, etc.").  There will only be one missing number.
 
 ```ruby
-string_missing_7    = (1..10000).reject { |x| x == 7 }.join(", ")
-string_missing_4567 = (1..10000).reject { |x| x == 4567 }.join(", ")
-string_missing_9999 = (1..10000).reject { |x| x == 9999 }.join(", ")
+string_missing_7    = (1..10000).reject { |x| x == 7 }.join(",")
+string_missing_4567 = (1..10000).reject { |x| x == 4567 }.join(",")
+string_missing_9999 = (1..10000).reject { |x| x == 9999 }.join(",")
 
 
 puts find_missing_number(string_missing_7) == 7         
