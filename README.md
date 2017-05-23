@@ -72,7 +72,7 @@ Define a `House` class, and model the behavior of a house.  Each house should ha
   * The House `initialize` method throws an `ArgumentError` if more or less than three arguments are passed.
   * Calling `toggle_heater` on an instance of House turns the heater on/off.
   * Calling `toggle_ac` turns the air conditioner on/off.
-  * Only the heater or the air conditioner should be on at the same time, never both.
+  * Only the heater or the air conditioner will be on at any given time, never both.
   * Calling `update_temp!` increases or decreases the current temperature depending on if the heater or the air conditioner is on.
   * When the heater is on, `update_temp!` increases the `current_temp` by 1 unit.
   * When the air conditioner is on, `update_temp!` decreases the `current_temp` by 2 units.
