@@ -10,7 +10,7 @@ Read carefully. By now, you understand that reading technical documents is hard.
   - You may use Google, books, and other resources for help, but do your own work.
   - Do not copy and paste code that you do not understand.
   - When you're finished, do a final commit and push your branch to github.
-  - Write tests, like this: `p my_method(input) == 'expected outcome'`. This `puts` a happy `true` to the console when the method is returning the expected outcome. *We have given you examples!* Use those examples and expand write more that include the edge cases you can think of. Write tests before you write code and execute the tests continuously while coding.
+  - Write tests, like this: `p my_method(input) == 'expected outcome'`. This `puts` a happy `true` to the console when the method is returning the expected outcome. *We have given you examples!* Use those examples and expand on them -- write more that include the edge cases you can think of. Write tests before you write code and execute the tests continuously while coding.
   - Include *all driver code and tests* in your submission. Your runner.rb file will ideally be error-free Ruby that puts lots of `true` when run.
   - If you run into issues completing this work, ask any instructor for help.
 
