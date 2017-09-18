@@ -1,14 +1,8 @@
 # EXERCISE 1
-
-<Your code here>
-
-
-
+first_name = "Iris"
+last_name = "Nevins"
 
 # EXERCISE 2
-
-<Your code here>
-
 
 
 
