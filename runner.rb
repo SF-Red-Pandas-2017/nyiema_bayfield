@@ -1,36 +1,39 @@
 # EXERCISE 1
 
-<Your code here>
+def define_name()
+  first_name = "Sarah"
+  last_name = "Caplan"
+end
+
+p define_name() == "Caplan"
+
+
+# # EXERCISE 2
+
+# <Your code here>
 
 
 
 
-# EXERCISE 2
-
-<Your code here>
+# # EXERCISE 3
 
 
-
-
-# EXERCISE 3
-
-=begin
-  <Your answer here>
-=end
+#   <Your answer here>
 
 
 
 
-# EXERCISE 4
 
-<Your code here>
+# # EXERCISE 4
+
+# <Your code here>
 
 
 
 
-# EXERCISE 5
+# # EXERCISE 5
 
-<Your code here>
+# <Your code here>
 
 
 
