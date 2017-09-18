@@ -1,6 +1,7 @@
 # EXERCISE 1
 
-<Your code here>
+first_name = "Britt"
+last_name = "Flowers"
 
 
 
