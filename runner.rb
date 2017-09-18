@@ -12,7 +12,7 @@ p define_name() == "Caplan"
 
 # <Your code here>
 
-
+p calculate_product([2,8,3]) == 48
 
 
 # # EXERCISE 3
