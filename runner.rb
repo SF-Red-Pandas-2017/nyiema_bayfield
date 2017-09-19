@@ -8,7 +8,7 @@ def last_name = bayfield
 
 # EXERCISE 2
 
-<Your code here>
+function calculate_product
 
 
 
