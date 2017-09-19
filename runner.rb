@@ -64,7 +64,7 @@ puts find_missing_number(string_missing_9999) == 9999
 
 # EXERCISE 5
 
-class House()
+class House
   def initialize(current_temp, minimum_temp, maximum_temp)
     @current_temp = current_temp
     @minimum_temp = minimum_temp
@@ -73,6 +73,29 @@ class House()
     @ac_on = false
   end
 
+  def toggle_heater
+    if @heater_on == true
+      puts "Heater is now off."
+      @heater_on = false
+    elsif @heater_on == false && @ac_on == false
+      puts "Heater is now on."
+      @heater_on = true
+    else
+      puts "AC is on, cannot turn on heater."
+  end
+
+  def toggle_ac
+    if @ac_on == true
+      puts "AC is now off."
+      @ac_on = false
+    elsif @ac_on == false && @heater_on == false
+      puts "AC is now on."
+      @heater_on = true
+    else
+      puts "Heater is on, cannot turn on AC."
+  end
+
 end
 
 joe_house = House.new()
+bill_house = House.new()
