@@ -1,6 +1,7 @@
 # EXERCISE 1
 
-<Your code here>
+def first_name = nyiema
+def last_name = bayfield
 
 
 
