@@ -59,9 +59,9 @@ class House
   end
 
   def heater_status(status)
-    if status == "on"
+    if status == "on" && @ac_on == false
       @heater_on = true
-    elsif status == "off"
+    elsif status == "on" && @ac_on == true
       @heater_on = false
     else
       @heater_on = false
@@ -73,8 +73,6 @@ class House
     if status == "on" && @heater_on == false
       @ac_on = true
     elsif status == "on" && @heater_on == true
-      @ac_on = false
-    elsif status == "off"
       @ac_on = false
     else
       @ac_on = false
@@ -102,6 +100,7 @@ class House
 
 
 
+
 end
 
 # driver/test code
@@ -118,7 +117,7 @@ end
 # puts find_missing_number(string_missing_9999) == 9999
 iris_house = House.new(76, 65, 80)
 p iris_house
-p iris_house.heater_status("on")
+p iris_house.heater_status("off")
 p iris_house.ac_status("on")
 p iris_house.toggle_ac
 p iris_house.toggle_heater
