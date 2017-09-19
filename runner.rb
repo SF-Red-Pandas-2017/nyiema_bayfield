@@ -62,28 +62,49 @@ class House
     @ac_on = false
   end
 
-  def toggle_heater()
-    if heater_on = false && ac_on = true
-      return heater_on = false
-    elsif heater_on = true && ac_on = false
-      return heater_on = false
-    else heater_on = false && ac_on = false
-      return heater_on = true
+  def toggle_heater
+    if @heater_on = false && @ac_on = true
+      return @heater_on = false
+    elsif @heater_on = true && @ac_on = false
+      return @heater_on = false
+    else @heater_on = false && @ac_on = false
+      return @heater_on = true
     end
   end
 
-  def toggle_ac()
-    if ac_on = false && heater_on = true
-      return ac_on = false
-    elsif ac_on = true && heater_on = false
-      return ac_on = false
-    else ac_on = false && heater_on = false
-      return ac_on = true
+  def toggle_ac
+    if @ac_on = false && @heater_on = true
+      return @ac_on = false
+    elsif @ac_on = true && @heater_on = false
+      return @ac_on = false
+    else @ac_on = false && @heater_on = false
+      return @ac_on = true
     end
   end
 
+  def update_temp!
+    if @heater_on = true
+      @current_temp += 1
+    else @ac_on = true
+      @current_temp += 2
+    end
+  end
+
+  def thermostat
+    if @current_temp > @maximum_temp
+      @ac_on = true
+      @heater_on = false
+    elsif @current_temp < @minimum_temp
+      @heater_on = true
+      @ac_on = false
+    end
+  end
 end
 # The House initialize method throws an ArgumentError if more or less than three arguments are passed.
+## Driver code
+my_house = House.new(75, 60, 80)
+
+
 
 
 
