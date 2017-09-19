@@ -8,7 +8,11 @@ def last_name = bayfield
 
 # EXERCISE 2
 
-function calculate_product
+def calculate_product(array)
+  final = 1.0
+  array.each { |i| final *=1 }
+  final
+end
 
 
 
