@@ -48,7 +48,61 @@ end
 
 
 # EXERCISE 5
+class House
 
+  def initialize(current_temp, minimum_temp, maximum_temp)
+    @current_temp = current_temp
+    @minimum_temp = minimum_temp
+    @maximum_temp = maximum_temp
+    @heater_on = false
+    @ac_on = false
+  end
+
+  def heater_status(status)
+    if status == "on"
+      @heater_on = true
+    elsif status == "off"
+      @heater_on = false
+    else
+      @heater_on = false
+    end
+    @heater_on
+  end
+
+  def ac_status(status)
+    if status == "on" && @heater_on == false
+      @ac_on = true
+    elsif status == "on" && @heater_on == true
+      @ac_on = false
+    elsif status == "off"
+      @ac_on = false
+    else
+      @ac_on = false
+    end
+    @ac_on
+  end
+
+  def toggle_heater
+    if @heater_on == true
+      @heater_on = false
+    else
+      @heater_on = true
+    end
+    @heater_on
+  end
+
+  def toggle_ac
+    if @ac_on == true
+      @ac_on = false
+    else
+      @ac_on = true
+    end
+    @ac_on
+  end
+
+
+
+end
 
 # driver/test code
 # puts calculate_product([1,2,3]) == 6 # this test puts 'true' if calculate_product([1,2,3]) returns the correct value of 6
@@ -59,6 +113,12 @@ end
 # puts format_name({:first => "Iris", :last => "Nevins"}) == "Nevins, Iris"
 # puts display_name({:first => "Iris", :last => "Nevins"}) == nil
 # puts find_missing_number("1, 2, 3, 5")
-puts find_missing_number(string_missing_7) == 7
-puts find_missing_number(string_missing_4567) == 4567
-puts find_missing_number(string_missing_9999) == 9999
+# puts find_missing_number(string_missing_7) == 7
+# puts find_missing_number(string_missing_4567) == 4567
+# puts find_missing_number(string_missing_9999) == 9999
+iris_house = House.new(76, 65, 80)
+p iris_house
+p iris_house.heater_status("on")
+p iris_house.ac_status("on")
+p iris_house.toggle_ac
+p iris_house.toggle_heater
