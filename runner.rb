@@ -57,8 +57,16 @@ p display_name({first:"Sarah", last:"Caplan"}) == nil
 
 # # EXERCISE 4
 
-# <Your code here>
-
+def find_missing_number(number)
+  num_array = number.split
+  sum = 0
+  num_array.each do |num|
+    sum += num.to_i
+  end
+  missing =  50005000- sum
+  missing
+end
+## This doesn't work...
 
 
 
@@ -117,6 +125,14 @@ p display_name({first:"Sarah", last:"Caplan"}) == nil
 # my_house = House.new(75, 60, 80)
 
 
+string_missing_7    = (1..10000).reject { |x| x == 7 }.join(",")
+string_missing_4567 = (1..10000).reject { |x| x == 4567 }.join(",")
+string_missing_9999 = (1..10000).reject { |x| x == 9999 }.join(",")
 
+
+puts find_missing_number(string_missing_7) == 7
+p find_missing_number(string_missing_7)
+puts find_missing_number(string_missing_4567) == 4567
+puts find_missing_number(string_missing_9999) == 9999
 
 
