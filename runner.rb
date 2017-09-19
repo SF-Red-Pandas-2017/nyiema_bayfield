@@ -30,8 +30,31 @@ puts calculate_product([-1, -2, -3]) == 6 #only one that should return false
 
 # EXERCISE 4
 
-def string_missing(str)
-numbers_array = str.split(",")
+def find_string_missing(str)
+  numbers_array = str.split(",")
+  number_missing = true
+  numbers_array.each do |i|
+    if (1..10000).include? i.to_i
+      number_missing = false
+    else
+      number_missing
+      p i
+    end
+  end
+end
+
+#DRIVER CODE
+
+string_missing_0    = (1..10000).reject { |x| x == 0 }.join(",")
+string_missing_10000 = (1..10000).reject { |x| x == 10000 }.join(",")
+string_missing_1 = (1..10000).reject { |x| x == 1 }.join(",")
+
+
+puts find_string_missing(string_missing_0) == 0
+puts find_string_missing(string_missing_10000) == 10000
+puts find_string_missing(string_missing_1) == 1
+
+
 
 
 
