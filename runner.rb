@@ -36,10 +36,26 @@ puts calculate_product([]) == nil
 
 # EXERCISE 4
 
-full_sum = 50005000
-def find_missing_number
+def find_missing_number(list)
+  full_sum = 50005000
+  num_array = list.split(',')
+
+  sum = num_array[0].to_i
+
+  i = 1
+
+  while i < num_array.length
+    sum += num_array[i].to_i
+    i+=1
+  end
+
+  missing_num = full_sum - sum.to_i
 
 end
+
+string_missing_7    = (1..10000).reject { |x| x == 7 }.join(",")
+string_missing_4567 = (1..10000).reject { |x| x == 4567 }.join(",")
+string_missing_9999 = (1..10000).reject { |x| x == 9999 }.join(",")
 
 puts find_missing_number(string_missing_7) == 7
 puts find_missing_number(string_missing_4567) == 4567
@@ -48,8 +64,15 @@ puts find_missing_number(string_missing_9999) == 9999
 
 # EXERCISE 5
 
-#def<Your code here>
+class House()
+  def initialize(current_temp, minimum_temp, maximum_temp)
+    @current_temp = current_temp
+    @minimum_temp = minimum_temp
+    @maximum_temp = maximum_temp
+    @heater_on = false
+    @ac_on = false
+  end
 
+end
 
-
-
+joe_house = House.new()
